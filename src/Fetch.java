@@ -1,4 +1,5 @@
 
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -17,6 +18,7 @@ public class Fetch {
                 // Check availability
                 boolean available = isURLAvailable(line);
                 System.out.println("Availability: " + (available ? "available " : "unavailable"));
+                DataStore.save(line);
             }
             reader.close();
         } catch (Exception e) {
