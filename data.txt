@@ -1,8 +1,10 @@
-http://example.com
-https://www.google.com/
-http://example.orgergfdg
-asuhdiasduooasdi
-http://example.com
-https://www.google.com/
-http://example.orgergfdg
-asuhdiasduooasdi
+http://example.com - Availability: available
+https://www.google.com/ - Availability: available
+http://example.com - Availability: available
+https://www.google.com/ - Availability: available
+http://example.orgergfdg - Availability: unavailable
+asuhdiasduooasdi - Availability: unavailable
+http://example.com - Availability: available
+https://www.google.com/ - Availability: available
+http://example.orgergfdg - Availability: unavailable
+asuhdiasduooasdi - Availability: unavailable
