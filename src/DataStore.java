@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataStore {
-    private static final String FILE_PATH = "data.txt";
+    private static final String FILE_PATH = "Results.txt";
 
     public static void save(String data) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PATH, true))) {

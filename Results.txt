@@ -1,7 +1,5 @@
 http://example.com - Availability: available
 https://www.google.com/ - Availability: available
-http://example.com - Availability: available
-https://www.google.com/ - Availability: available
 http://example.orgergfdg - Availability: unavailable
 asuhdiasduooasdi - Availability: unavailable
 http://example.com - Availability: available

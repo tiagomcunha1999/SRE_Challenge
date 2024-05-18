@@ -1,40 +1,24 @@
 
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Fetch {
 
-    public void GetUrls(boolean outputToConsole) {
+    private List<String> urlsToFetch;
 
-        List<String> urlsToFetch = new ArrayList<>();
-
-        try {
-            // Get the uls from the file
-            InputStream inputStream = Main.class.getResourceAsStream("resources/urls.txt");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                urlsToFetch.add(line);
-            }
-            reader.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    // Constructor to initialize the list
+    public Fetch(List<String> urlsToFetch) {
+        this.urlsToFetch = urlsToFetch;
+    }
+    
+    public void GetUrls() {
 
         for (String url : urlsToFetch) {
             boolean available = isURLAvailable(url);
             String result = "Availability: " + (available ? "available" : "unavailable");
             System.out.println("URL: " + url + " - " + result);
-            // Output to console if the flag is set
-            if (outputToConsole) {
-                System.out.println(result);
-            }
 
             // Save to data store
             DataStore.save(url + " - " + result);
