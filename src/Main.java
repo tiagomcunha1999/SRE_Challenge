@@ -46,7 +46,10 @@ public class Main {
                 e.printStackTrace();
             }
             live.stop(); 
-        }
+
+            History.displayHistory("Results.txt");
+            
+        } 
 
     }
 }
