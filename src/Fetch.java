@@ -24,7 +24,7 @@ public class Fetch {
     }
 
     //Checks the connection to the given URL
-    private static boolean isURLAvailable(String urlString) {
+    public static boolean isURLAvailable(String urlString) {
         
         try {
 
@@ -41,6 +41,7 @@ public class Fetch {
         }
     }
 
+    
     // Save to data store
     private void Save(String url, boolean available) {
         String result = String.format("%s is %s\n", url, available ? "available" : "unavailable");
