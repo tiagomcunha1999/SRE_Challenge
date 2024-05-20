@@ -5,11 +5,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import resources.MonitorData;
 
 public class Main {
-
-    private static List<MonitorData> datastore = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
         
@@ -44,7 +41,7 @@ public class Main {
                         return;
                     }else{
                     
-                        String restorePath = "args[1]";
+                        String restorePath = args[1];
 
                         Restore.restoreFromFile(restorePath);
                         System.out.println("Data restored from " + restorePath);
