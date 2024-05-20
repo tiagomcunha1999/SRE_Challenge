@@ -5,8 +5,13 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import resources.MonitorData;
+
 public class Main {
-    public static void main(String[] args) {
+
+    private static List<MonitorData> datastore = new ArrayList<>();
+
+    public static void main(String[] args) throws IOException {
         
         if (args.length > 0) { // Code with arguments
 
@@ -24,14 +29,30 @@ public class Main {
                     String backupPath = args[1];
 
                     try {
-                        Backup.backupToCSV(backupPath);
+                        Backup.backupToFile(backupPath);
                         System.out.println("Backup saved to " + backupPath);
                     } catch (IOException e) {
                         System.err.println("Backup failed: " + e.getMessage());
                     }
                     break;
 
-                default:
+
+                case "restore":
+
+                    if (args.length < 2) {
+                        System.out.println("Usage: java Main restore <file path>");
+                        return;
+                    }else{
+                    
+                        String restorePath = "args[1]";
+
+                        Restore.restoreFromFile(restorePath);
+                        System.out.println("Data restored from " + restorePath);
+                    }
+
+                break;
+
+                    default:
                     System.out.println("Unknown command: " + command);
                     break;
             }

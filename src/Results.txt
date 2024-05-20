@@ -18,3 +18,11 @@ http://example.com is available
 https://www.google.com/ is available
 http://example.orgergfdg is unavailable
 asuhdiasduooasdi is unavailable
+http://example.com is available
+https://www.google.com/ is available
+http://example.orgergfdg is unavailable
+asuhdiasduooasdi is unavailable
+http://example.com is available
+https://www.google.com/ is available
+http://example.orgergfdg is unavailable
+asuhdiasduooasdi is unavailable

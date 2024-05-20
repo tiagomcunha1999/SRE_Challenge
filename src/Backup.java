@@ -1,12 +1,7 @@
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -52,6 +47,13 @@ public class Backup {
             }
         }
     }
+
+/*     // Using ObjectOutputStream to ensure proper serialization
+    public static void serializeDataStore(String filePath) throws IOException {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filePath))) {
+            oos.writeObject(dataList);
+        }
+    } */
 
 /*         // Method to copy file content exactly as it is
         public static void copyFile(String sourcePath, String destPath) throws IOException {
